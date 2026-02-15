@@ -1,0 +1,208 @@
+#root {
+  min-height: 100vh;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* stops scrolling */
+}
+
+body {
+  background-color: #f4b0fe;
+}
+
+h1 {
+  font-size: 2.6em;
+  line-height: 3;
+  color: rgb(150, 0, 100);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 900;
+}
+h4 {
+  font-size: 1.3em;
+  color: rgb(0, 0, 0);
+  padding: 0;
+  margin: 30px 0 0;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.card {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 1px 15px 10px #6e007f93;
+  background-color: #fff;
+  max-width: 450px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers headings and input row */
+  text-align: center; /* centers headings */
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+input {
+  flex: 1;
+  font-size: 1rem;
+  padding: 0.2em 1em;
+}
+
+button.add {
+  border: 1px solid transparent;
+  padding: 0.1em 1em;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  font-family: inherit;
+  background-color: #6e007f;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  border-color: #000000;
+}
+button.add:hover {
+  border-color: #000000;
+  background-color: #e95bffb6;
+  color: black;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+button.delete {
+  border: 1px solid transparent;
+  padding: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  background-color: rgb(255, 11, 11);
+  cursor: pointer;
+  color: white;
+  transition: border-color 0.25s;
+  border-color: #000000;
+}
+button.delete:hover {
+  border-color: #000000;
+  background-color: rgb(226, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+button.marked {
+  border: 1px solid transparent;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  width: fit-content;
+  border-radius: 20px;
+  font-family: inherit;
+  background-color: rgba(0, 0, 0, 0.374);
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  transition: border-color 0.25s;
+  border-color: #000000;
+}
+button.marked:hover {
+  border-color: #000000;
+  background-color: rgba(0, 0, 0, 0.655);
+  color: rgb(255, 255, 255);
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.number::before {
+  counter-increment: item;
+  content: counter(item) ". ";
+  font-weight: 500;
+}
+
+ol {
+  list-style: none;
+  counter-reset: item;
+  padding-left: 0;
+  width: 100%;
+  text-align: left;
+}
+
+li {
+  margin-bottom: 7px;
+  font-size: 1.2rem;
+}
+
+input[type="checkbox"] {
+  transform: scale(2.1);
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.done {
+  text-decoration: line-through;
+  color: rgb(100, 100, 100);
+  font-size: 1.2rem;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  h1 {
+    font-size: 2.4em;
+    line-height: 2;
+  }
+
+  .card {
+    padding: 20px;
+    max-width: 340px;
+  }
+
+  button.delete {
+    padding: 2px;
+    font-size: 1rem;
+  }
+
+  .input-row input {
+    flex: 1;
+    height: auto;
+  }
+  .input-row button.add {
+    height: auto;
+    white-space: nowrap;
+  }
+  .input-row input {
+    width: 100%;
+  }
+  input {
+    flex: 1;
+    font-size: 0.85rem;
+    padding: 0.1em 1em;
+  }
+  input[type="checkbox"] {
+    transform: scale(1.6);
+    margin-right: 0.4rem;
+  }
+}
