@@ -3,12 +3,6 @@
 A simple and responsive Todo List application built with React.js.
 It allows users to add, delete, and mark todos as done. Designed with a clean UI using CSS Flexbox and supports mobile responsiveness.
 
-## 🌐 Live Demo:
-
-https://random-joke-generator-vlnc.onrender.com/
-
----
-
 ## Features
 
 - Add new todos
