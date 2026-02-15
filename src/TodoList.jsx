@@ -19,8 +19,9 @@ export default function TodoList() {
   };
 
   let deleteTodo = (id) => {
-    setTodos((prevTodos) => todos.filter((prevTodos) => prevTodos.id != id));
-  };
+  setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+};
+
 
   let markAsDoneAll = () => {
     setTodos((prevTodos) =>
