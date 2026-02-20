@@ -24,3 +24,13 @@ It allows users to add, delete, and mark todos as done. Designed with a clean UI
 - Use the checkbox to mark individual tasks as done.
 - Click Mark All as Done to complete all tasks.
 - Click the trash icon to delete a task.
+
+## Future Improvements
+
+- Add **Local Storage support** to persist tasks after page refresh  
+- Implement **Edit Todo** functionality  
+- Add **Due Date & Time picker** for tasks  
+- Create **Filter options** (All, Completed, Pending)  
+- Add **Search functionality**  
+- Implement **Dark / Light mode toggle**  
+- Add **User Authentication (Login/Signup)**  
