@@ -17,7 +17,7 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  overflow: hidden; /* stops scrolling */
+  overflow-y: auto;
 }
 
 body {
@@ -26,11 +26,12 @@ body {
 
 h1 {
   font-size: 2.6em;
-  line-height: 3;
+  line-height: 2;
   color: rgb(150, 0, 100);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: 900;
 }
+
 h4 {
   font-size: 1.3em;
   color: rgb(0, 0, 0);
@@ -43,16 +44,16 @@ h4 {
 .card {
   width: 100%;
   margin: 0;
-  padding: 20px;
+  padding: 25px;
   border-radius: 12px;
-  box-shadow: 1px 15px 10px #6e007f93;
+  box-shadow: 1px 13px 15px #6e007f93;
   background-color: #fff;
   max-width: 450px;
 
   display: flex;
   flex-direction: column;
-  align-items: center; /* centers headings and input row */
-  text-align: center; /* centers headings */
+  align-items: center;
+  text-align: center;
 }
 
 .input-row {
@@ -62,12 +63,12 @@ h4 {
 input {
   flex: 1;
   font-size: 1rem;
-  padding: 0.2em 1em;
+  padding: 6px;
 }
 
 button.add {
   border: 1px solid transparent;
-  padding: 0.1em 1em;
+ padding: 6px 12px;
   font-size: 1rem;
   font-weight: 700;
   color: white;
@@ -79,7 +80,7 @@ button.add {
 }
 button.add:hover {
   border-color: #000000;
-  background-color: #e95bffb6;
+  background-color: #6e007fc0;
   color: black;
 }
 button:focus,
@@ -87,41 +88,46 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+input[type="checkbox"] {
+  transform: scale(2);
+  cursor: pointer;
+  margin-right: 0.4rem;
+}
+.done {
+  text-decoration: line-through;
+  color: rgb(100, 100, 100);
+  font-size: 1.2rem;
+}
+
 button.delete {
   border: 1px solid transparent;
-  padding: 4px;
+  padding: 5px 3px;
   font-size: 1rem;
-  font-weight: 700;
-  font-family: inherit;
   background-color: rgb(255, 11, 11);
   cursor: pointer;
   color: white;
   transition: border-color 0.25s;
-  border-color: #000000;
 }
 button.delete:hover {
-  border-color: #000000;
   background-color: rgb(226, 0, 0);
-  color: rgb(255, 255, 255);
 }
 
 button.marked {
   border: 1px solid transparent;
-  padding: 8px 20px;
+  padding: 6px 20px;
   font-size: 1rem;
   font-weight: 700;
   width: fit-content;
   border-radius: 20px;
   font-family: inherit;
   background-color: rgba(0, 0, 0, 0.374);
-  cursor: pointer;
   color: rgb(0, 0, 0);
+  cursor: pointer;
   transition: border-color 0.25s;
-  border-color: #000000;
+  border: 1px solid #000000;
 }
 button.marked:hover {
-  border-color: #000000;
-  background-color: rgba(0, 0, 0, 0.655);
+  background-color: rgba(0, 0, 0, 0.674);
   color: rgb(255, 255, 255);
 }
 
@@ -140,8 +146,8 @@ button.marked:hover {
 
 .number::before {
   counter-increment: item;
-  content: counter(item) ". ";
-  font-weight: 500;
+  content: counter(item) ") ";
+  font-weight: 400;
 }
 
 ol {
@@ -154,18 +160,6 @@ ol {
 
 li {
   margin-bottom: 7px;
-  font-size: 1.2rem;
-}
-
-input[type="checkbox"] {
-  transform: scale(2.1);
-  cursor: pointer;
-  margin-right: 1rem;
-}
-
-.done {
-  text-decoration: line-through;
-  color: rgb(100, 100, 100);
   font-size: 1.2rem;
 }
 
